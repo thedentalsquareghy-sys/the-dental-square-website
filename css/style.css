@@ -165,7 +165,7 @@ h2.center{max-width:720px;}
 
 .hero-visual{position:relative;height:420px;}
 .hero-circle{
-  position:absolute;inset:40px;
+  position:absolute;inset:80px;
   border-radius:50%;
   background:linear-gradient(135deg,var(--teal),var(--navy));
   box-shadow:var(--shadow);
@@ -186,9 +186,9 @@ h2.center{max-width:720px;}
   animation:float 5s ease-in-out infinite;
   border-left:4px solid var(--teal);
 }
-.card-float-1{top:10px;left:0;animation-delay:0s;border-left-color:var(--coral);}
-.card-float-2{top:170px;right:-10px;animation-delay:1s;border-left-color:var(--sky);}
-.card-float-3{bottom:10px;left:30px;animation-delay:2s;border-left-color:var(--gold);}
+.card-float-1{top:0;left:0;animation-delay:0s;border-left-color:var(--coral);}
+.card-float-2{top:44%;right:0;animation-delay:1s;border-left-color:var(--sky);}
+.card-float-3{bottom:0;left:10px;animation-delay:2s;border-left-color:var(--gold);}
 @keyframes float{
   0%,100%{transform:translateY(0);}
   50%{transform:translateY(-12px);}
@@ -433,7 +433,19 @@ h2.center{max-width:720px;}
 /* ===== Responsive ===== */
 @media (max-width:980px){
   .hero-inner{grid-template-columns:1fr;}
-  .hero-visual{height:260px;margin-top:20px;}
+  .hero-visual{
+    height:auto;margin-top:28px;
+    display:flex;flex-direction:column;align-items:center;gap:16px;
+  }
+  .hero-circle{
+    position:static;inset:auto;
+    width:220px;height:220px;
+    order:-1;
+  }
+  .hero-card{
+    position:static;animation:none;
+    width:100%;max-width:280px;
+  }
   .about-grid,.why-grid,.contact-grid,.testimonials-grid{grid-template-columns:1fr;}
   .doctor-grid{grid-template-columns:1fr;}
   .approach-steps{grid-template-columns:repeat(2,1fr);}
